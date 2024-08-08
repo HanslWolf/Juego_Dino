@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://ccfq55gagi5l1"]
+[gd_scene load_steps=9 format=3 uid="uid://ccfq55gagi5l1"]
 
 [ext_resource type="Texture2D" uid="uid://ct0fiodbdms6d" path="res://Assets/Paisajes/bg_1.png" id="1_60n7s"]
-[ext_resource type="Texture2D" uid="uid://dqxp87dhbln04" path="res://Assets/Paisajes/bg_1_layer_3.png" id="2_dheo2"]
-[ext_resource type="Texture2D" uid="uid://b2l70rixa0xyv" path="res://Assets/Paisajes/bg_15_0002_Layer-3.png" id="3_8jfqd"]
+[ext_resource type="Texture2D" uid="uid://dpnisj6umvlec" path="res://Assets/Paisajes/bg_4_0000_layer_0.png" id="2_5o1st"]
 [ext_resource type="Texture2D" uid="uid://cjmpv02o1srml" path="res://Assets/Paisajes/bg_4_0002_layer_2.png" id="4_yct4w"]
 [ext_resource type="Texture2D" uid="uid://diyb7hd8yarw5" path="res://Assets/Nevados/clouds.png" id="5_qbslk"]
 [ext_resource type="Texture2D" uid="uid://fy24d14umtko" path="res://Assets/Departamentos/Cristo cocha.png" id="6_mxl3o"]
@@ -13,20 +12,14 @@
 [node name="Cochabamba level1" type="Node2D"]
 
 [node name="Paisaje1" type="Sprite2D" parent="."]
-position = Vector2(571.5, 321)
-scale = Vector2(0.809753, 0.79902)
+position = Vector2(559, 309.5)
+scale = Vector2(0.792582, 0.770833)
 texture = ExtResource("1_60n7s")
 
-[node name="Bg1Layer3" type="Sprite2D" parent="."]
-position = Vector2(1786.5, 318)
-scale = Vector2(0.852335, 0.79902)
-texture = ExtResource("2_dheo2")
-
-[node name="Bg150002Layer-3" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(1550, 586)
-scale = Vector2(1, 1)
-texture = ExtResource("3_8jfqd")
+[node name="Bg40000Layer0" type="Sprite2D" parent="Paisaje1"]
+position = Vector2(1503, 11.027)
+scale = Vector2(1.05589, 1.00477)
+texture = ExtResource("2_5o1st")
 
 [node name="Bg40002Layer2" type="Sprite2D" parent="."]
 position = Vector2(2946.75, 319.25)
@@ -39,7 +32,7 @@ scale = Vector2(1.35937, 1.20605)
 texture = ExtResource("5_qbslk")
 
 [node name="CristoCocha" type="Sprite2D" parent="."]
-position = Vector2(2458, 358)
+position = Vector2(3536, 389)
 scale = Vector2(2.11, 3.7619)
 texture = ExtResource("6_mxl3o")
 
@@ -54,11 +47,11 @@ scale = Vector2(1.29259, 1.38611)
 texture = ExtResource("8_6fxm1")
 
 [node name="Calle2" type="Sprite2D" parent="."]
-position = Vector2(3115, 371)
-scale = Vector2(1.72645, 1.97414)
+position = Vector2(3006, 367)
+scale = Vector2(1.98146, 2.28017)
 texture = ExtResource("9_pvj4w")
 
 [node name="Edificio2" type="Sprite2D" parent="."]
-position = Vector2(2227, 350)
+position = Vector2(2250, 367)
 scale = Vector2(3.53261, 2.50682)
 texture = ExtResource("7_6yc0q")

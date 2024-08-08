@@ -1,3 +1,16 @@
-[gd_scene format=3 uid="uid://iukq2otro78k"]
+[gd_scene load_steps=4 format=3 uid="uid://iukq2otro78k"]
+
+[ext_resource type="PackedScene" uid="uid://co515e3yaxkvc" path="res://Dino/player.tscn" id="1_0g43e"]
+[ext_resource type="PackedScene" uid="uid://pkt7ju3d2l1v" path="res://suelos/Pasarela.tscn" id="2_xgio3"]
+[ext_resource type="PackedScene" uid="uid://8qbf07583dev" path="res://suelos/Piso.tscn" id="3_wsey6"]
 
 [node name="Escena principal" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_0g43e")]
+position = Vector2(-3, 83)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("2_xgio3")]
+position = Vector2(317, -2)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("3_wsey6")]
+position = Vector2(828, 167)
