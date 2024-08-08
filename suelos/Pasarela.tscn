@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://pkt7ju3d2l1v"]
+
+[ext_resource type="Texture2D" uid="uid://diy3jw3cmu6ob" path="res://Assets/Ciudad/pasarela.png" id="1_pcvha"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j543v"]
+size = Vector2(638.5, 7)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pcvha")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 193)
+shape = SubResource("RectangleShape2D_j543v")
