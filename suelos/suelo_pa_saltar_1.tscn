@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0aubeybe1pjg"]
+
+[ext_resource type="Texture2D" uid="uid://b51386uhq8bwp" path="res://Assets/suelos/tileset_forest.png" id="1_eirx4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g8icm"]
+size = Vector2(60, 58)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_njvum"]
+a = Vector2(43, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4a35p"]
+size = Vector2(91, 40.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_okn1c"]
+size = Vector2(16, 14)
+
+[node name="sueloPaSaltar1" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_eirx4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-33, 0)
+shape = SubResource("RectangleShape2D_g8icm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(34, -7)
+shape = SubResource("SegmentShape2D_njvum")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-31, 5.25)
+shape = SubResource("RectangleShape2D_4a35p")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(40, -27)
+shape = SubResource("RectangleShape2D_okn1c")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc0d3vfwb2mup"]
+
+[ext_resource type="Texture2D" uid="uid://wg3xpca1khec" path="res://Assets/obstaculos/droga.png" id="1_3sg40"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o77jn"]
+size = Vector2(97, 89)
+
+[node name="Droga" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(77, 41)
+scale = Vector2(0.228933, 0.244863)
+texture = ExtResource("1_3sg40")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(71, 38)
+shape = SubResource("RectangleShape2D_o77jn")
