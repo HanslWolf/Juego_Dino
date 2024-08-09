@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d34pv0s5uiw20"]
+
+[ext_resource type="Texture2D" uid="uid://imbu26l1esia" path="res://Assets/objetos/banana.png" id="1_q17au"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_by2b0"]
+size = Vector2(21, 30)
+
+[node name="platano" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3, 4.5)
+scale = Vector2(1.625, 2.0625)
+texture = ExtResource("1_q17au")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.5, 6)
+shape = SubResource("RectangleShape2D_by2b0")
