@@ -1,57 +1,110 @@
-[gd_scene load_steps=9 format=3 uid="uid://ccfq55gagi5l1"]
+[gd_scene load_steps=12 format=3 uid="uid://ccfq55gagi5l1"]
 
-[ext_resource type="Texture2D" uid="uid://ct0fiodbdms6d" path="res://Assets/Paisajes/bg_1.png" id="1_60n7s"]
+[ext_resource type="PackedScene" uid="uid://co515e3yaxkvc" path="res://Dino/player.tscn" id="1_wbwon"]
 [ext_resource type="Texture2D" uid="uid://dpnisj6umvlec" path="res://Assets/Paisajes/bg_4_0000_layer_0.png" id="2_5o1st"]
 [ext_resource type="Texture2D" uid="uid://cjmpv02o1srml" path="res://Assets/Paisajes/bg_4_0002_layer_2.png" id="4_yct4w"]
 [ext_resource type="Texture2D" uid="uid://diyb7hd8yarw5" path="res://Assets/Nevados/clouds.png" id="5_qbslk"]
 [ext_resource type="Texture2D" uid="uid://fy24d14umtko" path="res://Assets/Departamentos/Cristo cocha.png" id="6_mxl3o"]
 [ext_resource type="Texture2D" uid="uid://cw3btw1cfealy" path="res://Assets/Ciudad/edificio.png" id="7_6yc0q"]
 [ext_resource type="Texture2D" uid="uid://cnwus52otwkch" path="res://Assets/Ciudad/Banco1.png" id="8_6fxm1"]
+[ext_resource type="Texture2D" uid="uid://b51386uhq8bwp" path="res://Assets/suelos/tileset_forest.png" id="8_40a5g"]
 [ext_resource type="Texture2D" uid="uid://cleyhx5h0251r" path="res://Assets/Ciudad/calle2.png" id="9_pvj4w"]
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_amthe"]
+texture = ExtResource("8_40a5g")
+2:0/0 = 0
+3:0/0 = 0
+5:0/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+8:1/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_7uksx"]
+sources/0 = SubResource("TileSetAtlasSource_amthe")
+
 [node name="Cochabamba level1" type="Node2D"]
+scale = Vector2(0.8, 0.57)
 
-[node name="Paisaje1" type="Sprite2D" parent="."]
-position = Vector2(559, 309.5)
-scale = Vector2(0.792582, 0.770833)
-texture = ExtResource("1_60n7s")
+[node name="Player" parent="." instance=ExtResource("1_wbwon")]
+position = Vector2(6.25, 147.368)
+scale = Vector2(0.421053, 0.588791)
 
-[node name="Bg40000Layer0" type="Sprite2D" parent="Paisaje1"]
-position = Vector2(1503, 11.027)
-scale = Vector2(1.05589, 1.00477)
-texture = ExtResource("2_5o1st")
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2(0.8, 0.57)
+tile_set = SubResource("TileSet_7uksx")
+collision_animatable = true
+format = 2
 
-[node name="Bg40002Layer2" type="Sprite2D" parent="."]
-position = Vector2(2946.75, 319.25)
-scale = Vector2(0.845124, 0.795956)
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+scale = Vector2(0.8, 0.57)
+
+[node name="Paisaje1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(325.025, 206.772)
+scale = Vector2(0.449828, 0.516597)
 texture = ExtResource("4_yct4w")
 
-[node name="nube1" type="Sprite2D" parent="."]
-position = Vector2(1725, 98)
-scale = Vector2(1.35937, 1.20605)
+[node name="Bg40000Layer0" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(308.412, 209.456)
+scale = Vector2(0.416775, 0.513372)
+texture = ExtResource("2_5o1st")
+
+[node name="Bg40002Layer2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(2257.5, 229.825)
+scale = Vector2(0.8, 0.57)
+texture = ExtResource("4_yct4w")
+
+[node name="nube1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(1645.65, 8.40983)
+scale = Vector2(0.8, 0.57)
 texture = ExtResource("5_qbslk")
 
-[node name="CristoCocha" type="Sprite2D" parent="."]
+[node name="CristoCocha" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2(3536, 389)
 scale = Vector2(2.11, 3.7619)
 texture = ExtResource("6_mxl3o")
 
-[node name="Edificio" type="Sprite2D" parent="."]
-position = Vector2(1347, 348)
-scale = Vector2(3.22065, 2.52955)
+[node name="Edificio" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(282.5, 256.14)
+scale = Vector2(1.52065, 1.56196)
 texture = ExtResource("7_6yc0q")
 
-[node name="Banco1" type="Sprite2D" parent="."]
-position = Vector2(1725, 387)
-scale = Vector2(1.29259, 1.38611)
+[node name="Banco1" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(456.25, 243.86)
+scale = Vector2(0.8, 1.01599)
 texture = ExtResource("8_6fxm1")
 
-[node name="Calle2" type="Sprite2D" parent="."]
-position = Vector2(3006, 367)
-scale = Vector2(1.98146, 2.28017)
+[node name="Calle2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(1475, 400)
+scale = Vector2(0.8, 0.57)
 texture = ExtResource("9_pvj4w")
 
-[node name="Edificio2" type="Sprite2D" parent="."]
-position = Vector2(2250, 367)
-scale = Vector2(3.53261, 2.50682)
+[node name="Edificio2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(1735, 391.228)
+scale = Vector2(0.8, 0.57)
 texture = ExtResource("7_6yc0q")

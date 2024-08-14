@@ -1,16 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://co515e3yaxkvc"]
+[gd_scene load_steps=9 format=3 uid="uid://co515e3yaxkvc"]
 
 [ext_resource type="Script" path="res://Dino/player.gd" id="1_62x6j"]
 [ext_resource type="Texture2D" uid="uid://tg22y6p6eu" path="res://Assets/Dino/image.png" id="2_6fcgj"]
-[ext_resource type="Script" path="res://Dino/Camera2D.gd" id="3_1mi1y"]
-[ext_resource type="Texture2D" uid="uid://oepvbhm6ax7p" path="res://Assets/Dino/Falling (32 x 32).png" id="3_44s50"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q8ftx"]
-size = Vector2(13.5, 18)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_06bwh"]
-radius = 6.30285
-height = 16.4921
+size = Vector2(68.25, 70)
 
 [sub_resource type="Animation" id="Animation_bkcn6"]
 resource_name = "Parada"
@@ -90,34 +84,18 @@ _data = {
 script = ExtResource("1_62x6j")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(26, 91)
+position = Vector2(90, 330)
+scale = Vector2(4.356, 3.422)
 texture = ExtResource("2_6fcgj")
 hframes = 9
 vframes = 5
 frame = 1
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(26, 85)
-rotation = -0.393583
-scale = Vector2(-0.0313655, 0.0369301)
-texture = ExtResource("3_44s50")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(26, 97)
+position = Vector2(89.875, 354)
 shape = SubResource("RectangleShape2D_q8ftx")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(36, 95)
-rotation = 1.53607
-shape = SubResource("CapsuleShape2D_06bwh")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_18s8i")
 }
-
-[node name="Camera2D" type="Camera2D" parent="."]
-limit_left = -1
-limit_top = -1000000
-limit_bottom = 670
-script = ExtResource("3_1mi1y")

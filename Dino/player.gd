@@ -33,6 +33,5 @@ func _physics_process(delta):
 		$AnimationPlayer.play("attack")
 		await ($AnimationPlayer.animation_finished)
 		attack = false
-
 	
 	
