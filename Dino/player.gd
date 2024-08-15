@@ -26,11 +26,11 @@ func _physics_process(delta):
 			velocity.y -= jump
 		velocity.y += gravity
 		
-		if Input.is_action_just_pressed("attack"):
+		if Input.is_action_just_pressed("ataque"):
 			attack=true
 		move_and_slide()
 	else:
-		$AnimationPlayer.play("attack")
+		$AnimationPlayer.play("ataque")
 		await ($AnimationPlayer.animation_finished)
 		attack = false
 	

@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://co515e3yaxkvc"]
+[gd_scene load_steps=10 format=3 uid="uid://co515e3yaxkvc"]
 
 [ext_resource type="Script" path="res://Dino/player.gd" id="1_62x6j"]
 [ext_resource type="Texture2D" uid="uid://tg22y6p6eu" path="res://Assets/Dino/image.png" id="2_6fcgj"]
+[ext_resource type="Script" path="res://Dino/Camera2D.gd" id="3_tlpsn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q8ftx"]
-size = Vector2(68.25, 70)
+size = Vector2(40.1406, 68.375)
 
 [sub_resource type="Animation" id="Animation_bkcn6"]
 resource_name = "Parada"
@@ -84,18 +85,23 @@ _data = {
 script = ExtResource("1_62x6j")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(90, 330)
-scale = Vector2(4.356, 3.422)
+position = Vector2(90.326, 105.688)
+scale = Vector2(4.04212, 3.4805)
 texture = ExtResource("2_6fcgj")
 hframes = 9
 vframes = 5
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(89.875, 354)
+position = Vector2(88.9297, 125.813)
 shape = SubResource("RectangleShape2D_q8ftx")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_18s8i")
 }
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-1, 2)
+offset = Vector2(214, 118)
+script = ExtResource("3_tlpsn")

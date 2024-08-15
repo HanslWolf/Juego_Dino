@@ -1,9 +1,3 @@
-[gd_scene load_steps=2 format=3 uid="uid://brg2y8wb4ftqt"]
-
-[ext_resource type="Texture2D" uid="uid://cjmpv02o1srml" path="res://Assets/Paisajes/bg_4_0002_layer_2.png" id="1_a226q"]
+[gd_scene format=3 uid="uid://brg2y8wb4ftqt"]
 
 [node name="boss1" type="Node2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(505, 309)
-texture = ExtResource("1_a226q")
